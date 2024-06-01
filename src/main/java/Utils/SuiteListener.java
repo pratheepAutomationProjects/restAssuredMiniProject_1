@@ -17,7 +17,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import BaseTest.BaseTest;
 
-public class SuiteListener extends BaseTest implements ITestListener, IAnnotationTransformer {
+public class SuiteListener  implements ITestListener, IAnnotationTransformer {
 	ExtentReports extent = extentReports.getReportObject();
 	ExtentTest test;
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();

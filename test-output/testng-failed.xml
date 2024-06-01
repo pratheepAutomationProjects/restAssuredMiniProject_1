@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SeleniumFramework.TestCases.TC_HistoryValidation_03">
+      <class name="com.RestAssured.TestCases.TC_02_Path_QueryParamter">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="AfterSuite"/>
-          <include name="History_Validation"/>
+          <include name="testHeader"/>
         </methods>
-      </class> <!-- com.SeleniumFramework.TestCases.TC_HistoryValidation_03 -->
+      </class> <!-- com.RestAssured.TestCases.TC_02_Path_QueryParamter -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

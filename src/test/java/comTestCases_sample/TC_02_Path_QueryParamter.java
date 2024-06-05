@@ -1,4 +1,4 @@
-package com.RestAssured.TestCases;
+package comTestCases_sample;
 
 import org.testng.annotations.Test;
 

@@ -1,8 +1,6 @@
 package Utils;
 
-import java.io.IOException;
-
-import org.openqa.selenium.WebDriver;
+import java.io.File;
 import org.testng.IAnnotationTransformer;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -14,8 +12,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-
-import BaseTest.BaseTest;
 
 public class SuiteListener  implements ITestListener, IAnnotationTransformer {
 	ExtentReports extent = extentReports.getReportObject();
@@ -34,19 +30,9 @@ public class SuiteListener  implements ITestListener, IAnnotationTransformer {
 				MarkupHelper.createLabel(result.getName() + "-TestCase failed", ExtentColor.RED));
 		extentTest.get().log(Status.FAIL,
 				MarkupHelper.createLabel(result.getThrowable() + "-TestCase failed", ExtentColor.RED));
-
-		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			// screenshot path here
-			filePath = getScreenshot(result.getMethod().getMethodName(), driver);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	
+		// screenshot path here
+		filePath = System.getProperty("user.dir") + File.separator + "Screenshot" + File.separator +result.getMethod().getMethodName() + ".png";
 		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
 	}
 

@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAssured.TestCases.TC_02_Path_QueryParamter">
+      <class name="api.testCases.TC_02_DDTests">
         <methods>
-          <include name="testHeader"/>
+          <include name="testPostUser" invocation-numbers="0 1 2"/>
+          <include name="testDeleteUSer" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- com.RestAssured.TestCases.TC_02_Path_QueryParamter -->
+      </class> <!-- api.testCases.TC_02_DDTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

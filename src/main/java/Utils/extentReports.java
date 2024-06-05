@@ -12,7 +12,7 @@ public class extentReports {
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.SS").format(new Date());
 		String extentReporter= ConstantsHelper.ExtentReportsPath + timestamp + ".html";
 		 ExtentSparkReporter  esr = new ExtentSparkReporter(extentReporter);
-		 esr.config().setDocumentTitle("Automatio Report");
+		 esr.config().setDocumentTitle("Automation RestAssured Report");
 		 esr.config().setReportName("Automation Report by PR");
 		 ExtentReports er = new ExtentReports();
 		 er.attachReporter(esr);

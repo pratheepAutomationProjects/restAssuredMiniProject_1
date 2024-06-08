@@ -1,0 +1,9 @@
+api\testCases\TC_02_DDTests.class
+comTestCases_sample\TC_02_Path_QueryParamter.class
+api\utilities\XcelUtils.class
+comTestCases_sample\TC_01_RestAssured.class
+api\endpoints\UserEndpoints.class
+api\utilities\DataProviders.class
+api\payload\User.class
+api\testCases\TC_01_UserTests.class
+api\endpoints\Routes.class
